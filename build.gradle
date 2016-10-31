@@ -1,0 +1,57 @@
+group 'com.kleist.it'
+version '1.0-SNAPSHOT'
+
+apply plugin: "io.ratpack.ratpack-java"
+
+apply plugin: "idea"
+apply plugin: 'java'
+apply plugin: 'maven'
+
+
+
+
+
+
+buildscript {
+
+
+    repositories{
+        jcenter()
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies{
+
+        classpath "io.ratpack:ratpack-gradle:1.4.3"
+
+
+    }
+
+
+}
+
+
+
+
+
+repositories {
+    jcenter()
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile  group:  'io.ratpack', name: 'ratpack-guice', version: '1.4.3'
+    compile  group:  'io.ratpack', name: 'ratpack-rx', version: '1.4.3'
+
+    compile group: 'io.ratpack', name: 'ratpack-hikari', version: '1.4.3'
+
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.6.2'
+
+    compile group: 'org.neo4j', name: 'neo4j-ogm-core', version: '2.0.4'
+
+    compile group: 'io.ratpack', name: 'ratpack-hikari', version: '1.4.3'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.36'
+
+}
